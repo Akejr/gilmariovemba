@@ -29,13 +29,22 @@ pnpm start
 
 ## 🌐 Deploy
 
-### Vercel / Netlify / Render
+### Vercel (Recomendado)
 
-Para evitar erros de lockfile durante o deploy, o projeto já está configurado com `.npmrc` que permite atualizações automáticas do lockfile.
+O projeto já está configurado com `vercel.json` para deploy automático.
+
+**Configurações (já incluídas no vercel.json):**
+
+- **Build Command:** `pnpm install --no-frozen-lockfile && pnpm build`
+- **Install Command:** `pnpm install --no-frozen-lockfile`
+- **Output Directory:** `dist/public`
+- **Node Version:** 18.x ou superior
+
+### Outras plataformas (Netlify / Render)
 
 **Configurações recomendadas:**
 
-- **Build Command:** `pnpm install && pnpm build`
+- **Build Command:** `pnpm install --no-frozen-lockfile && pnpm build`
 - **Start Command:** `pnpm start`
 - **Node Version:** 18.x ou superior
 - **Package Manager:** pnpm
